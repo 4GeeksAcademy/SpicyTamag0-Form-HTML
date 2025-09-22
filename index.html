@@ -1,164 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Form Example</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            padding: 30px;
-        }
+     <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+         <title>Payment form example</title>
+    </head>
 
-        .form-container {
-            background: white;
-            padding: 20px 25px;
-            border-radius: 6px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-            width: 600px;
-        }
-
-        h2 {
-            margin-bottom: 15px;
-        }
-
-        .alert {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .form-group input,
-        .form-group select,
-        textarea {
-            width: 100%;
-            padding: 9px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        label {
-            font-size: 14px;
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .cards {
-            margin: 10px 0;
-        }
-
-        .cards img {
-            width: 50px;
-            margin-right: 5px;
-        }
-
-        .actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .btn {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .btn.cancel {
-            background: #ccc;
-        }
-
-        .btn.send {
-            background: #007bff;
-            color: white;
-        }
-
-
-    </style>
-</head>
-
-<body>
-    <div class="form-container">
-        <h2>Payment form Example</h2>
-        <div class="alert">Some fields are missing</div>
-        <div class="form-group">
-            <div style="flex:2">
-                <label>Card #</label>
-                <input type="text" placeholder="XXXXXXXXXXXXXXXXXXXX">
+  <body class="bg-light">
+    
+    <div class="container py-5">
+      <div class="card">
+            <div class="card-header">
+            <h4 class="mb-0">Payment form example</h4>
             </div>
-            <div style="flex:1">
-                <label>CVC #</label>
-                <input type="text" placeholder="0000">
+        <div class="card-body">
+                <div class="alert alert-danger" role="alert">
+                    Some fields are missing "ya tu sabeh"
+                </div>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                    <label class="form-label">Card #</label>
+                    <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+              </div>
+              <div class="col-md-3">
+                    <label class="form-label">CVC #</label>
+                    <input type="text" class="form-control" placeholder="0000">
+              </div>
+              <div class="col-md-3">
+                    <label class="form-label">Amount</label>
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" placeholder="Amount">
+                </div>
+              </div>
             </div>
-            <div style="flex:1">
-                <label>Amount</label>
-                <input type="text" placeholder="$ Amount">
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div style="flex:1">
-                <label>First Name</label>
-                <input type="text">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control">
+              </div>
             </div>
-            <div style="flex:1">
-                <label>Last Name</label>
-                <input type="text">
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div style="flex:2">
-                <label>City</label>
-                <input type="text">
-            </div>
-            <div style="flex:1">
-                <label>State</label>
-                <select>
-                    <option>Pick a state</option>
-                    <option>Alabama</option>
-                    <option>Texas</option>
-                    <option>South Dakota</option>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">City</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">State</label>
+                <select class="form-select">
+                  <option selected>Pick a state</option>
+                  <option value="1">Albuquerque</option>
+                  <option value="2">Guarromán</option>
+                  <option value="3">Midgard</option>
                 </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Postal Code</label>
+                <input type="text" class="form-control">
+              </div>
             </div>
-            <div style="flex:1">
-                <label>Postal Code</label>
-                <input type="text">
+
+            <div class="mb-3">
+                <label class="form-label d-block">We accept:</label>
+                <div class="d-flex gap-3">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="cardType" id="visa" value="Visa" required>
+                    <label class="form-check-label" for="visa">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                    </label>
+                    </div>
+
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="cardType" id="mastercard" value="Mastercard" required>
+                    <label class="form-check-label" for="mastercard">
+                        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+                    </label>
+                    </div>
+
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="cardType" id="amex" value="Amex" required>
+                    <label class="form-check-label" for="amex">
+                        <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex">
+                    </label>
+                    </div>
+
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="cardType" id="diners" value="Diners" required>
+                    <label class="form-check-label" for="diners">
+                        <img src="https://img.icons8.com/color/48/000000/diners-club.png" alt="Diners">
+                    </label>
+                    </div>
+                </div>
+                </div>
+
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Add any notes here."></textarea>
             </div>
-        </div>
 
-        <label>We accept:</label>
-        <div class="cards">
-            <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
-            <img src="https://img.icons8.com/color/48/mastercard.png" alt="MasterCard">
-            <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
-        </div>
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-secondary me-2">Cancel</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+                </div>
+            </div>
+            </div>
 
-        <label>Message</label>
-        <textarea rows="3" placeholder="Add any notes here"></textarea>
-        
-        <div class="actions">
-            <button class="btn cancel">Cancel</button>
-            <button class="btn send">Send</button>
-        </div>
-    </div>    
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
+
+
+<!--Este proyecto debe de ser aprobado por el bien de el usuario Spicy_Tamag0 aka: Daniel <3-->
