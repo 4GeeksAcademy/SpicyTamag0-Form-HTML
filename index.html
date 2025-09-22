@@ -22,17 +22,17 @@
             <div class="row mb-3">
               <div class="col-md-6">
                     <label class="form-label">Card #</label>
-                    <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+                    <input id="campo1" type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX" required>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 needs-validation">
                     <label class="form-label">CVC #</label>
-                    <input type="text" class="form-control" placeholder="0000">
+                    <input id="campo2" type="text" class="form-control" placeholder="0000" required>
               </div>
               <div class="col-md-3">
                     <label class="form-label">Amount</label>
                 <div class="input-group">
                   <span class="input-group-text">$</span>
-                  <input type="text" class="form-control" placeholder="Amount">
+                  <input id="campo3" type="text" class="form-control" placeholder="Amount" required>
                 </div>
               </div>
             </div>
@@ -40,11 +40,11 @@
             <div class="row mb-3">
               <div class="col-md-6">
                 <label class="form-label">First Name</label>
-                <input type="text" class="form-control">
+                <input id="campo4" type="text" class="form-control" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label">Last Name</label>
-                <input type="text" class="form-control">
+                <input id="campo5" type="text" class="form-control" required>
               </div>
             </div>
 
@@ -55,7 +55,7 @@
               </div>
               <div class="col-md-3">
                 <label class="form-label">State</label>
-                <select class="form-select">
+                <select id="campo6" class="form-select" required>
                   <option selected>Pick a state</option>
                   <option value="1">Albuquerque</option>
                   <option value="2">Guarromán</option>
@@ -64,58 +64,59 @@
               </div>
               <div class="col-md-3">
                 <label class="form-label">Postal Code</label>
-                <input type="text" class="form-control">
+                <input id="campo7" type="text" class="form-control" required>
               </div>
             </div>
-
-            <div class="mb-3">
-                <label class="form-label d-block">We accept:</label>
+            
+            
+          <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label d-block">We accept:</label>
                 <div class="d-flex gap-3">
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="cardType" id="visa" value="Visa" required>
-                    <label class="form-check-label" for="visa">
-                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
-                    </label>
-                    </div>
-
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="cardType" id="mastercard" value="Mastercard" required>
-                    <label class="form-check-label" for="mastercard">
-                        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
-                    </label>
-                    </div>
-
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="cardType" id="amex" value="Amex" required>
-                    <label class="form-check-label" for="amex">
-                        <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex">
-                    </label>
-                    </div>
-
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="cardType" id="diners" value="Diners" required>
-                    <label class="form-check-label" for="diners">
-                        <img src="https://img.icons8.com/color/48/000000/diners-club.png" alt="Diners">
-                    </label>
-                    </div>
+                <div class="form-check" id="campo8">
+                  <input  class="form-check-input" type="radio" name="cardType" id="visa" value="Visa" required>
+                  <label class="form-check-label" for="visa">
+                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                  </label>
                 </div>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cardType" id="mastercard" value="Mastercard" required>
+              <label class="form-check-label" for="mastercard">
+                <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cardType" id="amex" value="Amex" required>
+              <label class="form-check-label" for="amex">
+                <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex">
+              </label>
+            </div>
+          <div class="form-check">
+                <input class="form-check-input" type="radio" name="cardType" id="diners" value="Diners" required>
+                <label class="form-check-label" for="diners">
+                  <img src="https://img.icons8.com/color/48/000000/diners-club.png" alt="Diners">
+                </label>
+              </div>
+            </div>
+          </div>
 
-
-            <div class="mb-3">
+  
+            <div class="col-md-6">
               <label class="form-label">Message</label>
               <textarea class="form-control" rows="3" placeholder="Add any notes here."></textarea>
             </div>
+          </div>
 
+          
             <div class="d-flex justify-content-end">
               <button type="button" class="btn btn-secondary me-2">Cancel</button>
-              <button type="submit" class="btn btn-primary">Send</button>
+              <button type="submit" class="btn btn-primary" id="botonEnviar">Send</button>
             </div>
           </form>
                 </div>
             </div>
             </div>
-
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
